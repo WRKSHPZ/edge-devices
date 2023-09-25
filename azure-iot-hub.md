@@ -15,7 +15,7 @@ We need to create an IoT hub. You can choose to:
 ## 4b. Using preconfigured Azure resources
 If you do not have access to an active Azure subscription, you can use our wrkshpz IoT hub. Log in to the Azure portal (in an in-private browser) by using these credentials:  
 | Login    | https://portal.azure.com         |
-| :------- | -------------------------------- |
+| :------- | :------------------------------- |
 | User     | workshop@wrkshpz.onmicrosoft.com |
 | Password | Wabu9147                         |
 
