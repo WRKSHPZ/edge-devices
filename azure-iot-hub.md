@@ -1,4 +1,5 @@
 # Azure IoT hub integration
+An Azure IoT hub provides a cloud-hosted solution back end to connect virtually any device. Extend your solution from the cloud to the edge with per-device authentication, built-in device management, and scaled provisioning. For more marketing speak: https://azure.microsoft.com/en-us/products/iot-hub
 
 TODO:Steps 1-3
 
