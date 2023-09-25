@@ -17,12 +17,23 @@ If you do not have access to an active Azure subscription, you can use our wrksh
 | Login    | https://portal.azure.com         |
 | :------- | :------------------------------- |
 | User     | workshop@wrkshpz.onmicrosoft.com |
-| Password | Wabu9147                         |
+| Password | *q4CKmZ#                         |
+| Connection string | HostName=wrkshpz.azure-devices.net;SharedAccessKeyName=wrkshpz;SharedAccessKey=DFsqKdIOi2iR/wnf/lmR1R8aIa0Wcr/LQAIoTDGCWqE= |
 
 These credentials will be invalidated after the workshop and can and should only be used for registering your IoT device. Please choose a unique device ID in the next step, fi. using your first name or initials.
 
-## 5. Registering your device
+The IoT hub in this subscription is the: wrkshpz.azure-devices.net
 
+## 5. Registering your device
+We need to create a device with the IoT hub to use when programming our ESP-32-cam board.  
+
+1. Navigate to the newly created or preconfigured IoT hub.
+2. Feel free to check out the IoT hub options and panes
+3. Click on the 'Devices' pane in the left menu
+4. Click 'Add Device' in the top toolbar on the 'Devices' pane
+5. Choose a Device ID and make sure it is unique when using the preconfigured IoT hub, fi. using your first name or initials
+6. Leave the other options as-is
+7. Click on your newly registered device and copy-paste the 'Device id' and 'Primary connection string' values. You will need these values in the next step.
 
 ## 6. Programming the ESP-32 board
 Before you are able to program the board, you need to follow the instructions in the [prerequisites](/prerequisites.md) document.
