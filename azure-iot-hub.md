@@ -4,12 +4,20 @@ An Azure IoT hub provides a cloud-hosted solution back end to connect virtually 
 TODO:Steps 1-3
 
 ## 4a. Setting up Azure resources
-This step is to setup the necessary IoT hub resources in the Azure portal. If you do not have access to an active Azure subscription, skip to 4b instead.
+This step is to set up the necessary IoT hub resources in the Azure portal. If you do not have access to an active Azure subscription, skip to 4b instead.
+
+We need to create an IoT hub. You can choose to:
+- [Use the Azure Portal](https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal)
+- [Use Visual Studio Code](https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-create-use-iot-toolkit)
+- [Use Azure Powershell](https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-create-using-powershell)
+- [Use Azure CLI](https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-create-using-cli)
 
 ## 4b. Using preconfigured Azure resources
-If you do not have access to an active Azure subscription, you can use our wrkshpz iot hub. Login to the Azure portal (in an in-private browser) by using these credentials:  
-TODO credentials
-These credentials will be invalidated after the workshop and can and should only be used for registering your IoT device. Please choose a unique device ID, fi. using your first name or initials.
+If you do not have access to an active Azure subscription, you can use our wrkshpz IoT hub. Log in to the Azure portal (in an in-private browser) by using these credentials:  
+| User                             | Password |
+| -------------------------------- | -------- |
+| workshop@wrkshpz.onmicrosoft.com | Wabu9147 |
+These credentials will be invalidated after the workshop and can and should only be used for registering your IoT device. Please choose a unique device ID in the next step, fi. using your first name or initials.
 
 ## 5. Registering your device
 
