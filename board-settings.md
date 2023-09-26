@@ -18,6 +18,14 @@ Configure the Arduino IDE to connect to an 'AI Thinker ESP32-CAM' by:
 
 ## Arduino board settings
 Normally the board settings are ok, but if you made changes, or want to verify board settings that work, this is a working setup:
-| Setting | Value |
-| --------| ------ |
-| 
+| Setting                              | Value           |
+| ------------------------------------ | ------          |
+| CPU frequency                        | 80MHz (WiFi/BT) |
+| Core Debug Level                     | Verbose         |
+| Erase All Flasg Before Sketch Upload | Enabled         |
+| Flash Frequency                      | 80MHz           |
+| Flash Mode                           | DIO             |
+| Partition Scheme                     | Minimal (1.3MB APP/700KB SPIFFS)
+
+![Board settings](/wrkshpz/images/board-settings.png)
+
