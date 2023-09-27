@@ -16,9 +16,9 @@ Challenge yourself with programming the ESP-32 board with C code that allows you
 This part of the workshop is programming only, but opens up the possibilities of interfacing of a SaaS IoT hub which really helps with building maintainable IoT solutions
 
 With a bonus part for those that want to live on the wild side:  
-- [Using the ESP-32 as a webserver for camera access](/image-webserver.md)  
+- **[Using the ESP-32 as a webserver for camera access](/image-webserver.md)**   
 Challenge yourself with programming the ESP-32 board with C code that allows you to setup the board as a webserver and take pictures with the built-in camera. You would then be able to send these images to Azure cognitive services.  
-The challenge with this workshop part is the performance issues you will run in to as it will push the board to its processing limits and requires alot of patience.
+The challenge with this workshop part is the performance issues you will run in to as it will push the board to its processing limits and requires alot of patience. Mind there currently is no Cognitive Service integration. You will have to implement that yourself.
 
 
 
