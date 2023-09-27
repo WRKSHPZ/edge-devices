@@ -50,6 +50,7 @@ Before you are able to program the board, you need to follow the instructions in
 1. Test the connection to the board by invoking 'Get board info' from the 'Tools' menu
 1. Open the 'Azure_IoT_Hub_ESP32.ino' Arduino solution from the [Azure_IoT_Hub_ESP32](/Azure_IoT_Hub_ESP32) folder
 1. In the 'iot_configs.h' file update the variables for the WiFi and configure your backend service endpoint accordingly if you are running your own version of the backend services.
+1. If you get any compilation errors from missing library dependencies, open up the library manager by going to the 'Sketch' menu, follow the 'Include library'-popout-menu en select 'Manage libraries'. You can usually find the library by typing the name of the #include reference at the top of the INO file. (i.e. For "WifiClientSecure.h", search for "WifiClientSecure").
 1. Upload you sketch to the ESP32-CAM board by clicking the arrow button in the toolbar, or invoke the 'Upload' command in the 'Sketch' menu.
 
 When succesful, continue to the next step.
@@ -96,7 +97,7 @@ You are making the following connections:
 
 The push button should bridge the 30 and 32 rails on the breadboard. Keep in mind the button connects the contacts along each side... so the short side. Check the photo for reference. The button pins in the D-row are not used.
 
-We are including the reistor for noise reduction. The IO ports tend to be a bit noisy (cheap hardware) and we want clear signals for our input ports.
+We are including the resistor for noise reduction. The IO ports tend to be a bit noisy (cheap hardware) and we want clear signals for our input ports.
 
 The RGB led has four legs, three legs determine the color intensity (we will only be powering it full, but when varying voltages you can create all colors) for red, green and blue and the longest leg (for this LED the cathode) is ground. On the breadboard schematic this is the orange track. Since the LED is a diode, it will only work in the one way, so make sure to plug in the longest leg (the cathode) in H23.
 
