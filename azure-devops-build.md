@@ -25,11 +25,11 @@ For more information on the ESP-32 CAM board, consult the excellent data sheet f
 #### ESP-32 Cam pinout 
 ![ESP-32 CAM pinout](/wrkshpz/images/ESP32-CAM-pinout-new.webp "ESP-32 pinout")
 
-Since the ESP-32-cam does not have a built-in USB port, we need the ESP-32-cam shield which the board plugs into. This programmer shield allows us to flash the board with new versions of the software and provides buttons for resetting the device and programming mode (a mode we do not need or use in this workshop, since the Arduino IDE handles this for us).  
+Since the ESP32-CAM does not have a built-in USB port, we need the ESP32-CAM shield which the board plugs into. This programmer shield allows us to flash the board with new versions of the software and provides buttons for resetting the device and programming mode (a mode we do not need or use in this workshop, since the Arduino IDE handles this for us).  
 
 #### What's in de box?
-- An ESP-32-cam module
-- An ESP-32-cam programmer shield 
+- An ESP32-CAM module
+- An ESP32-CAM programmer shield 
 - A breadboard
 - A breadboard powersupply
 - 1 USB mini to USB A cable 
@@ -42,27 +42,27 @@ Since the ESP-32-cam does not have a built-in USB port, we need the ESP-32-cam s
 ## 4. Programming the ESP-32 board
 Before you are able to program the board, you need to follow the instructions in the [prerequisites](/prerequisites.md) document.
 
-1. Plug in the ESP-32-cam module on the ESP-32-cam programmer shield. The pin-out and pin-input should line up.  
-1. Use the USB mini to USB A cable to connect the ESP-32-cam programmer shield to your laptop.
-1. Start up Arduino IDE and make sure you have added library support for the ESP-32-cam board as specified in the [prerequisites](/prerequisites.md) document.
-1. Configure the ESP-32-cam board as an 'AI thinker ESP-32-cam' board (Please note the list is **not** in alfabetical order)
+1. Plug in the ESP32-CAM module on the ESP32-CAM programmer shield. The pin-out and pin-input should line up.  
+1. Use the USB mini to USB A cable to connect the ESP32-CAM programmer shield to your laptop.
+1. Start up Arduino IDE and make sure you have added library support for the ESP32-CAM board as specified in the [prerequisites](/prerequisites.md) document.
+1. Configure the ESP32-CAM board as an 'AI thinker ESP32-CAM' board (Please note the list is **not** in alfabetical order)
 1. Adjust the board specs in the 'Tools' menu to the specifications in the [board settings](/board-settings.md) document
 1. Test the connection to the board by invoking 'Get board info' from the 'Tools' menu
 1. Open the 'Azure_IoT_Hub_ESP32.ino' Arduino solution from the [Azure_IoT_Hub_ESP32](/Azure_IoT_Hub_ESP32) folder
-1. In the 'TODO.h' file update the variables for the WiFi and configure your backend service endpoint accordingly if you are running your own version of the backend services.
-1. Upload you sketch to the ESP-32-cam board by clicking the arrow button in the toolbar, or invoke the 'Upload' command in the 'Sketch' menu.
+1. In the 'iot_configs.h' file update the variables for the WiFi and configure your backend service endpoint accordingly if you are running your own version of the backend services.
+1. Upload you sketch to the ESP32-CAM board by clicking the arrow button in the toolbar, or invoke the 'Upload' command in the 'Sketch' menu.
 
 When succesful, continue to the next step.
 
 ## 5. Testing the ESP-32 connection with WiFi and Azure
-Before we transfer our ESP-32-cam board to the breadboard, we need to verify if the WiFi connection and retrieving the build status from the Azure functions works.
+Before we transfer our ESP32-CAM board to the breadboard, we need to verify if the WiFi connection and retrieving the build status from the Azure functions works.
 
 1. Make sure your programming shield is still wired through USB to your laptop. 
-1. Open up the serial monitor by clicking the button in the toolbar, or invoke the 'TODO' command in the 'TODO' menu.
+1. Open up the serial monitor by clicking the button in the toolbar, or invoke the 'Serial monitor' command in the 'Tools' menu.
 1. Verify the output in the serial monitor looks OK. An example of valid output is provided in the [valid-serial-monitor](/valid-serial-monitor.md) document. Please note things like IP numbers should differ from the provided example.
 
 ## 6. Wiring the breadboard and light
-After verifying our working software, we are now ready to remove the ESP-32-cam board from the programming shield. It should resume  working every time you power it on.  
+After verifying our working software, we are now ready to remove the ESP32-CAM board from the programming shield. It should resume  working every time you power it on.  
 We are now going to setup the breadboard according to this example:
 
 Keep in mind the following:  

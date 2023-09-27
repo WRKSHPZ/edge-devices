@@ -3,7 +3,7 @@
 For this workshop we are going to explore two scenarios connecting an ESP-32 microcontroller to Azure. These two scenarios provide a way to get acquainted with the technology to open up your mind to the vast number of possibilites this can offer.
 
 ## The ESP-32 microcontroller
-The ESP-32 microcontroller is the successor to the ESP-8266 microcontroller. These are low-cost, low-power boards with integrated WiFi. These boards can have a camera and USB port integrated on the board. For this workshop we are going to use the ESP-32-CAM which has a camera, but does not have an integrated USB port. To be able to program the boards, we are going to use a programmer board which allows us to interface with the board through USB.
+The ESP-32 microcontroller is the successor to the ESP-8266 microcontroller. These are low-cost, low-power boards with integrated WiFi. These boards can have a camera and USB port integrated on the board. For this workshop we are going to use the ESP32-CAM which has a camera, but does not have an integrated USB port. To be able to program the boards, we are going to use a programmer board which allows us to interface with the board through USB.
 To allow the USB connection we have to install the CH-340 USB drivers, as mentioned in the installation and setup instructions in the prerequisites document.
 
 ## The Workshop

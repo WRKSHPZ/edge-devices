@@ -1,7 +1,34 @@
 # Azure IoT hub integration
 An Azure IoT hub provides a cloud-hosted solution back end to connect virtually any device. Extend your solution from the cloud to the edge with per-device authentication, built-in device management, and scaled provisioning. For more marketing speak: https://azure.microsoft.com/en-us/products/iot-hub
 
-TODO:Steps 1-3
+## 1. Get coffee
+☕
+
+## 2. Installing drivers & software
+Follow the instructions on [this page](/prerequisites.md)
+
+## 3. Getting acquainted with the ESP-32 board
+ESP32 is a series of low-cost, low-power system on a chip microcontrollers with integrated Wi-Fi and dual-mode Bluetooth. ESP32 is created and developed by Espressif Systems, a Shanghai-based Chinese company. It is a successor to the ESP8266 microcontroller.  
+It is a programmable board that can be flashed with C code using a multitude of software, but we will be using de Arduino Integrated Development Environment (IDE) since this will greatly improve the development process for people not familiar with developing for this kind of hardware.  
+The board we are using is the ESP32-CAM and has an OV2640 camera onboard, a microSD card slot and 10 IO ports we can use to our liking. There are also some power and ground pins. You can power the ESP32-CAM through the 3.3V or 5V pins. However, many people reported errors when powering the ESP32-CAM with 3.3V, so we always advise to power the ESP32-CAM through the 5V pin.  
+For more information on the ESP-32 CAM board, consult the excellent data sheet from Random nerd tutorials: https://randomnerdtutorials.com/esp32-cam-ai-thinker-pinout/
+
+#### ESP-32 Cam pinout 
+![ESP-32 CAM pinout](/wrkshpz/images/ESP32-CAM-pinout-new.webp "ESP-32 pinout")
+
+Since the ESP32-CAM does not have a built-in USB port, we need the ESP32-CAM shield which the board plugs into. This programmer shield allows us to flash the board with new versions of the software and provides buttons for resetting the device and programming mode (a mode we do not need or use in this workshop, since the Arduino IDE handles this for us).  
+
+#### What's in de box?
+- An ESP32-CAM module
+- An ESP32-CAM programmer shield 
+- A breadboard
+- A breadboard powersupply
+- 1 USB mini to USB A cable 
+- 1 USB micro to USB A cable
+- 10 jumper wires
+- 1 push button
+- 1 10k Ohm resistor
+- 1 RGB led
 
 ## 4a. Setting up Azure resources
 This step is to set up the necessary IoT hub resources in the Azure portal. If you do not have access to an active Azure subscription, skip to 4b instead.
@@ -25,7 +52,7 @@ These credentials will be invalidated after the workshop and can and should only
 The IoT hub in this subscription is the: wrkshpz.azure-devices.net
 
 ## 5. Registering your device
-We need to create a device with the IoT hub to use when programming our ESP-32-cam board.  
+We need to create a device with the IoT hub to use when programming our ESP32-CAM board.  
 
 1. Navigate to the newly created or preconfigured IoT hub.
 2. Feel free to check out the IoT hub options and panes
@@ -38,15 +65,15 @@ We need to create a device with the IoT hub to use when programming our ESP-32-c
 ## 6. Programming the ESP-32 board
 Before you are able to program the board, you need to follow the instructions in the [prerequisites](/prerequisites.md) document.
 
-1. Plug in the ESP-32-cam module on the ESP-32-cam programmer shield. The pin-out and pin-input should line up.  
-1. Use the USB mini to USB A cable to connect the ESP-32-cam programmer shield to your laptop.
-1. Start up Arduino IDE and make sure you have added library support for the ESP-32-cam board as specified in the [prerequisites](/prerequisites.md) document.
-1. Configure the ESP-32-cam board as an 'AI thinker ESP-32-cam' board (Please note the list is **not** in alfabetical order)
+1. Plug in the ESP32-CAM module on the ESP32-CAM programmer shield. The pin-out and pin-input should line up.  
+1. Use the USB mini to USB A cable to connect the ESP32-CAM programmer shield to your laptop.
+1. Start up Arduino IDE and make sure you have added library support for the ESP32-CAM board as specified in the [prerequisites](/prerequisites.md) document.
+1. Configure the ESP32-CAM board as an 'AI thinker ESP32-CAM' board (Please note the list is **not** in alfabetical order)
 1. Adjust the board specs in the 'Tools' menu to the specifications in the [board settings](/board-settings.md) document
 1. Test the connection to the board by invoking 'Get board info' from the 'Tools' menu
 1. Open the 'Azure_IoT_Hub_ESP32.ino' Arduino solution from the [Azure_IoT_Hub_ESP32](/Azure_IoT_Hub_ESP32) folder
 1. In the 'iot_configs.h' file update the variables for the WiFi and configure your backend service endpoint accordingly if you are running your own version of the backend services. Check the [values you should update](/azure-iot-hub-values.md).
-1. Upload you sketch to the ESP-32-cam board by clicking the arrow button in the toolbar, or invoke the 'Upload' command in the 'Sketch' menu.
+1. Upload you sketch to the ESP32-CAM board by clicking the arrow button in the toolbar, or invoke the 'Upload' command in the 'Sketch' menu.
 
 When succesful, continue to the next step.
 
