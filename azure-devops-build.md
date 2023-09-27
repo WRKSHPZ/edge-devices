@@ -36,8 +36,8 @@ Since the ESP-32-cam does not have a built-in USB port, we need the ESP-32-cam s
 - 1 USB micro to USB A cable
 - 10 jumper wires
 - 1 push button
+- 1 10k Ohm resistor
 - 1 RGB led
-- 1 TODO Ohm resistor
 
 ## 4. Programming the ESP-32 board
 Before you are able to program the board, you need to follow the instructions in the [prerequisites](/prerequisites.md) document.
@@ -46,11 +46,11 @@ Before you are able to program the board, you need to follow the instructions in
 1. Use the USB mini to USB A cable to connect the ESP-32-cam programmer shield to your laptop.
 1. Start up Arduino IDE and make sure you have added library support for the ESP-32-cam board as specified in the [prerequisites](/prerequisites.md) document.
 1. Configure the ESP-32-cam board as an 'AI thinker ESP-32-cam' board (Please note the list is **not** in alfabetical order)
-1. Adjust the board specs in the 'Todo' menu to the specifications in the [board settings](/board-settings.md) document
-1. Test the connection to the board by invoking 'Get board info' from the 'TODO' menu
-1. Open the 'TODO.ino' Arduino solution from this repository
-1. In the 'TODO.c' file update the variables for the WiFi and configure your backend service endpoint accordingly if you are running your own version of the backend services.
-1. Upload you sketch to the ESP-32-cam board by clicking the arrow button in the toolbar, or invoke the 'TODO' command in the 'TODO' menu.
+1. Adjust the board specs in the 'Tools' menu to the specifications in the [board settings](/board-settings.md) document
+1. Test the connection to the board by invoking 'Get board info' from the 'Tools' menu
+1. Open the 'Azure_IoT_Hub_ESP32.ino' Arduino solution from the [Azure_IoT_Hub_ESP32](/Azure_IoT_Hub_ESP32) folder
+1. In the 'TODO.h' file update the variables for the WiFi and configure your backend service endpoint accordingly if you are running your own version of the backend services.
+1. Upload you sketch to the ESP-32-cam board by clicking the arrow button in the toolbar, or invoke the 'Upload' command in the 'Sketch' menu.
 
 When succesful, continue to the next step.
 
@@ -68,15 +68,46 @@ We are now going to setup the breadboard according to this example:
 Keep in mind the following:  
 - The color of jumper wires does not really matter, but since the GPIO pins used are hardcoded in our software, please use the provided pinouts
 - Since the maximum voltage is 5V, there should not be any danger of electrocution, but do not lick exposed wires or surfaces
+- When the board starts short-cycling or smoking, please disconnect and trace the connections to make sure you did not short circuit something
 - You will be able to create short circuits, please do not. While there are safeguards in place in the hardware, it can result in damaging the hardware and worse.
-- Please note the bread-board power supply can provide two different voltages. Configure the correct voltage for each rail.
+- Please note the bread-board power supply can provide two different voltages. Configure the correct voltage for each rail. We will only be using 1 rail and that should be powered with 5v. The toggle switch on the power supply makes it possible to switch between 3.3 and 5v.
 
 When done, it should look something like this: 
+![Breadboard](/wrkshpz/images/breadboard-photo.jpg)
 
+Schematically the connections should be:
+![Breadboard](/wrkshpz/images/breadboard-schematic.png)
+
+Assuming the ESP32-CAM is plugged in all the way on the left with the power pins (labeled 3V3 and 5V on the board) in pin 1 of the breadboard.
+
+You are making the following connections:
+| Port ESP  | From | To           | To   | Why    |
+| --------- | ---- | ------------ | ---- | ------ |
+| 5V        | A1   | PWR (+)      |      | Power  |
+| GND       | A2   | PWR grnd (-) |      | Ground |
+| IO12      | A3   | RGB Blue     | F25  | RGB    |
+| IO13      | A4   | RGB Green    | F24  | RGB    |
+| IO2       | A7   | RGB Red      | F22  | RGB    |
+|           | F23  | RGB Cathode  | PWR grnd (-) | RGB |
+| 3V3       | J1   | Button in    | H32  | Button |
+| U0R (IO3) | J6   | Button out   | I30  | Button |
+|           | G30  | Resistor     | G38  | Noise reduction |
+|           | F30  | Resistor     | PWR grnd (-) | Noise reduction |
+
+The push button should bridge the 30 and 32 rails on the breadboard. Keep in mind the button connects the contacts along each side... so the short side. Check the photo for reference. The button pins in the D-row are not used.
+
+We are including the reistor for noise reduction. The IO ports tend to be a bit noisy (cheap hardware) and we want clear signals for our input ports.
+
+The RGB led has four legs, three legs determine the color intensity (we will only be powering it full, but when varying voltages you can create all colors) for red, green and blue and the longest leg (for this LED the cathode) is ground. On the breadboard schematic this is the orange track. Since the LED is a diode, it will only work in the one way, so make sure to plug in the longest leg (the cathode) in H23.
+
+Please check that the ESP32-CAM board is plugged in to port 1, with the power supply on the other side of the board.
 
 ## 7. Testing the standalone setup
 After creating this device you should not bring in your hand luggage when flying, you are ready to test it.
 
 1. Connect the breadboard power supply to your laptop using the USB micro to USB A cable.
-1. Verify the light goes from green to red, reflecting the failed build status
-1. Push the button to simulate a succeed build, but notice the light changes to red again when the device polls the Azure function for the build status.
+1. The LED should start to blink blue while connecting to WiFi. If it has succesfully connected to WiFi the led will turn green. 
+1. After a few seconds the light goes from green to red, reflecting the failed build status
+1. Push the button to simulate a succeeded build, but notice the light changes to red again when the device polls the Azure function for the build status. Default the device is on a 15 second polling delay, but you can configure this in the C code in the Arduino IDE.
+
+You have succesfully created an Azure-Devops-Build-Status-3000™ device. Feel free to play around with the code and setup, or move on to the IoT hub part.

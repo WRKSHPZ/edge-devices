@@ -1,0 +1,40 @@
+```
+ -> rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+ -> configsip: 0, SPIWP:0xee
+ -> clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+ -> mode:DIO, clock div:1
+ -> load:0x3fff0030,len:1184
+ -> load:0x40078000,len:13260
+ -> load:0x40080400,len:3028
+ -> entry 0x400805e4
+ -> [     5][D][esp32-hal-cpu.c:244] setCpuFrequencyMhz(): PLL: 320 / 4 = 80 Mhz, APB: 80000000 Hz
+ -> [   516][I][esp32-hal-psram.c:96] psramInit(): PSRAM enabled
+ -> 1970/1/1 00:00:00 [INFO] Connecting to WIFI SSID ********
+ -> [   606][D][WiFiGeneric.cpp:1035] _eventCallback(): Arduino Event: 0 - WIFI_READY
+ -> [   733][V][WiFiGeneric.cpp:340] _arduino_event_cb(): STA Started
+ -> [   734][D][WiFiGeneric.cpp:1035] _eventCallback(): Arduino Event: 2 - STA_START
+ -> [   858][V][WiFiGeneric.cpp:97] set_esp_interface_ip(): Configuring Station static IP: 0.0.0.0, MASK: 0.0.0.0, GW: 0.0.0.0
+ -> ........[  5031][V][WiFiGeneric.cpp:355] _arduino_event_cb(): STA Connected: SSID: *********, BSSID: 56:74:12:b6:94:48, Channel: 11, Auth: WPA2_WPA3_PSK
+ -> [  5034][D][WiFiGeneric.cpp:1035] _eventCallback(): Arduino Event: 4 - STA_CONNECTED
+ -> .[  5575][V][WiFiGeneric.cpp:369] _arduino_event_cb(): STA Got New IP:192.168.245.146
+ -> [  5576][D][WiFiGeneric.cpp:1035] _eventCallback(): Arduino Event: 7 - STA_GOT_IP
+ -> [  5579][D][WiFiGeneric.cpp:1098] _eventCallback(): STA IP: 192.168.245.146, MASK: 255.255.255.0, GW: 192.168.245.78
+ -> .
+ -> 1970/1/1 00:00:05 [INFO] WiFi connected, IP address: 192.168.245.146
+ -> 1970/1/1 00:00:05 [INFO] Setting time using SNTP
+ -> .....
+ -> 2023/9/26 19:29:16 [INFO] Time initialized!
+ -> 2023/9/26 19:29:16 [INFO] Client ID: unique123
+ -> 2023/9/26 19:29:16 [INFO] Username: wrkshpz.azure-devices.net/unique123/?api-version=2020-09-30&DeviceClientType=c%2F1.5.0-beta.1(ard;esp32)
+ -> 2023/92023//9/26 19:29:16 [INFO] 26MQTT event MQTT_EVENT_BEFORE_CONNECT
+ ->  19:29:16 [INFO] MQTT client started
+ -> 2023/9/26 19:29:16 [INFO] Sending telemetry ...
+ -> 2023/9/26 19:29:19 [INFO] MQTT event MQTT_EVENT_CONNECTED
+ -> 2023/9/26 19:29:19 [INFO] Subscribed for cloud-to-device messages; message id:32774
+ -> 2023/9/26 19:29:19 [INFO] Message published successfully
+ -> 2023/9/26 19:29:19 [INFO] MQTT event MQTT_EVENT_SUBSCRIBED
+ -> 2023/9/26 19:29:19 [INFO] MQTT event MQTT_EVENT_PUBLISHED
+ -> 2023/9/26 19:29:21 [INFO] Sending telemetry ...
+ -> 2023/9/26 19:29:21 [INFO] Message published successfully
+ -> 2023/9/26 19:29:21 [INFO] MQTT event MQTT_EVENT_PUBLISHED
+```
