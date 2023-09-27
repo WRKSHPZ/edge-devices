@@ -1,7 +1,10 @@
 ## Azure backend service
 This service is an Azure Function app that retrieves the status of a build using a Personal Access Token (PAT). Using a PAT is not a best practice for production scenarios, but really suitable for demos.  
 
-We do not recommend using the workshop time to deploy these resources yourself, because you are fine using the already provided function with the same result.
+We do not recommend using the workshop time to deploy these resources yourself, because you are fine using the already provided function with the same result. The url for the ready-made function, including auth key is:
+```
+https://fa-wrkshpz-build-status.azurewebsites.net/api/GetBuildStatus?code=941XPEOOtaXZ76KBLNheLMkozIVZKjv74lTwYov47bPCAzFugOU6vw==
+```
 
 The function retrieves the status of the latest build and returns 'OK' when ok and 'NOK' when not ok.
 
