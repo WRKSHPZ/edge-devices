@@ -109,6 +109,6 @@ After creating this device you should not bring in your hand luggage when flying
 1. Connect the breadboard power supply to your laptop using the USB micro to USB A cable.
 1. The LED should start to blink blue while connecting to WiFi. If it has succesfully connected to WiFi the led will turn green. 
 1. After a few seconds the light goes from green to red, reflecting the failed build status
-1. Push the button to simulate a succeeded build, but notice the light changes to red again when the device polls the Azure function for the build status. Default the device is on a 15 second polling delay, but you can configure this in the C code in the Arduino IDE.
+1. Push the button to simulate a succeeded build (light turns yellow), but notice the light changes to red again when the device polls the Azure function for the build status. Default the device is on a 15 second polling delay, but you can configure this in the C code in the Arduino IDE.
 
 You have succesfully created an Azure-Devops-Build-Status-3000™ device. Feel free to play around with the code and setup, or move on to the IoT hub part.

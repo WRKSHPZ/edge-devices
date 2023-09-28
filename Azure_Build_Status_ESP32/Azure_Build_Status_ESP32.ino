@@ -22,6 +22,13 @@ void SetLightToGreen() {
   digitalWrite(13, HIGH);
 }
 
+void SetLightToOrange() {
+  Serial.println("Set light orange");
+  digitalWrite(2, HIGH);
+  digitalWrite(12, LOW);
+  digitalWrite(13, HIGH);
+}
+
 void SetLightToRed() {
   Serial.println("Set light red");
   digitalWrite(2, HIGH);
@@ -47,7 +54,7 @@ void IRAM_ATTR resetBuildStatus()
 {
   Serial.println("Reset build status...");
   buildStatusOk = true;
-  SetLightToGreen();
+  SetLightToOrange();
 }
 
 void setup() {
