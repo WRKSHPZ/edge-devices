@@ -47,8 +47,8 @@ In this example we are not going to use the camera, so you do not have to instal
 1. Plug in the ESP32-CAM module on the ESP32-CAM programmer shield. The pin-out and pin-input should line up.  
 1. Use the USB mini to USB A cable to connect the ESP32-CAM programmer shield to your laptop.
 1. Start up Arduino IDE and make sure you have added library support for the ESP32-CAM board as specified in the [prerequisites](/prerequisites.md) document.
-1. Configure the ESP32-CAM board as an 'AI thinker ESP32-CAM' board (Please note the list is **not** in alfabetical order)
 1. Adjust the board specs in the 'Tools' menu to the specifications in the [board settings](/board-settings.md) document
+1. Configure the ESP32-CAM board as an 'AI thinker ESP32-CAM' board (Please note the list is **not** in alfabetical order)
 1. Test the connection to the board by invoking 'Get board info' from the 'Tools' menu
 1. Open the 'Azure_Build_Status_ESP32.ino' Arduino solution from the [Azure_Build_Status_ESP32](/Azure_Build_Status_ESP32) folder
 1. In the 'iot_configs.h' file update the variables for the WiFi and configure your backend service endpoint accordingly if you are running your own version of the backend services.
