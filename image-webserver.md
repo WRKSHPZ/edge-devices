@@ -28,7 +28,10 @@ Since the ESP32-CAM does not have a built-in USB port, we need the ESP32-CAM shi
 - 1 10k Ohm resistor
 - 1 RGB led
 
-## 3. Loading the CameraWebServer
+## 3. Installing the OV2640 camera
+To install the OV2640 camera, follow the instructions in the [Install camera document](/install-camera.md)  
+
+## 4. Loading the CameraWebServer
 1. Start up Arduino IDE and make sure you have added library support for the ESP32-CAM board as specified in the [prerequisites](/prerequisites.md) document.
 1. Go to the 'File' menu
 1. Open up the pop-out 'Examples' menu

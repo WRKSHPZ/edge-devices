@@ -65,6 +65,8 @@ We need to create a device with the IoT hub to use when programming our ESP32-CA
 ## 6. Programming the ESP-32 board
 Before you are able to program the board, you need to follow the instructions in the [prerequisites](/prerequisites.md) document.
 
+In this example we are not going to use the camera, so you do not have to install it on the board. If you would like to do so nonetheless, please follow the instructions in the [Install camera document](/install-camera.md)  
+
 1. Plug in the ESP32-CAM module on the ESP32-CAM programmer shield. The pin-out and pin-input should line up.  
 1. Use the USB mini to USB A cable to connect the ESP32-CAM programmer shield to your laptop.
 1. Start up Arduino IDE and make sure you have added library support for the ESP32-CAM board as specified in the [prerequisites](/prerequisites.md) document.
