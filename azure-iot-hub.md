@@ -43,7 +43,7 @@ We need to create an IoT hub. You can choose to:
 If you do not have access to an active Azure subscription, you can use our wrkshpz IoT hub. Log in to the Azure portal (in an in-private browser) by using these credentials:  
 | Login    | https://portal.azure.com         |
 | :------- | :------------------------------- |
-| User     | workshop@wrkshpz.onmicrosoft.com |
+| User     | workshop2@wrkshpz.onmicrosoft.com |
 | Password | *q4CKmZ#                         |
 | Connection string | HostName=wrkshpz.azure-devices.net;SharedAccessKeyName=wrkshpz;SharedAccessKey=DFsqKdIOi2iR/wnf/lmR1R8aIa0Wcr/LQAIoTDGCWqE= |
 
