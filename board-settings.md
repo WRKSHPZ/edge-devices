@@ -8,6 +8,7 @@ Configure the Arduino IDE to include extra board manager URLs by:
 ```http://arduino.esp8266.com/stable/package_esp8266com_index.json,https://dl.espressif.com/dl/package_esp32_index.json,https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json```
 4. Click on 'Ok'
 5. Restart Arduino IDE to load the extra board definitions
+6. Load the board definition for de esp32 boards from EspressIf by navigating to the 'Tools' menu, pop-out the Boards sub-menu and open the boards manager. Now search for 'esp32' and install the esp32 library from EspressIf.
 
 ## Arduino board type
 Configure the Arduino IDE to connect to an 'AI Thinker ESP32-CAM' by:
